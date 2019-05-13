@@ -1,0 +1,377 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	font-family: Helvetica;
+}
+
+.error {
+	color: #ff0000;
+}
+
+/* Background picture */
+.background {
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-repeat: no-repeat;
+	width: auto;
+	height: auto;
+	background-attachment: fixed;
+}
+
+/* The popup form - hidden by default */
+.formPopup {
+    display: none;
+    position: fixed;
+    top: 10vh;
+	right: 10vh;
+    border: 3px solid #FFBB33;
+    background-color: #FFFAE5;
+    z-index: 9;
+    width: 300px;
+    padding: 1%;
+}
+
+/* Add styles to the form container */
+.formContainer {
+    background-color: #FFFAE5;
+    padding: 5%;
+}
+
+/* Full-width input fields */
+.formContainer input[type=text], .formContainer input[type=password], .formContainer input[type=email] {
+    width: 88%;
+    padding: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: white;
+    border: 3px solid #ccc;
+}
+
+/* When the inputs get focus, do something */
+.formContainer input[type=text]:focus, .formContainer input[type=password]:focus {
+    border: 3px solid #FFBB33;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.formContainer .popupLogin {
+    float: right;
+    background-color: #EDB100;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+/* Facebook login button */
+.facebook {
+	float: left;
+    background-color: #5474b7;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    margin-left: 5%;
+	margin-bottom: 10%;
+}
+
+.facebook:hover {
+    background-color: #6c8bcc;
+}
+
+/* Add some hover effects to buttons */
+.formContainer .popupLogin:hover, .open-button:hover {
+    background-color: #F4D475;
+}
+
+/* Login button */
+.login {
+	height: 30px;
+	float: right;
+	margin-top: 20px;
+    margin-right: 20px;
+	margin-left: 20px;
+	background-color: #FFFAE5;
+    border-radius: 50px;
+	border: 2px solid #FFBB33;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFBB33;
+}
+
+.login:hover {
+	box-shadow: 0 7px 40px 0 rgba(58, 8, 95, 0.2), 0 7px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Registration button */
+.register {
+	height: 30px;
+	float: right;
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: #FFFAE5;
+    border-radius: 50px;
+	border: 2px solid #FFBB33;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFBB33;
+}
+
+.register:hover {
+	box-shadow: 0 7px 40px 0 rgba(58, 8, 95, 0.2), 0 7px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* About button */
+.about {
+	height: 30px;
+	width: 65px;
+	float: right;
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: #FFFAE5;
+    border-radius: 50px;
+	border: 2px solid #FFBB33;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFBB33;
+}
+
+.about:hover {
+	box-shadow: 0 7px 40px 0 rgba(58, 8, 95, 0.2), 0 7px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Info button */
+.info {
+	height: 30px;
+	width: 65px;
+	float: right;
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: #FFFAE5;
+    border-radius: 50px;
+	border: 2px solid #FFBB33;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFBB33;
+}
+
+.info:hover {
+	box-shadow: 0 7px 40px 0 rgba(58, 8, 95, 0.2), 0 7px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Lost and found logo */
+.logo {
+	width: 35%;
+	margin-top: 2%;
+    margin-left: 37%;
+}
+
+/* Popover styling */
+a {
+  text-decoration: none;
+}
+
+/* Container for the LOST SOMETHING and FOUND SOMETHING button */
+.buttonContainer {
+	display: grid;
+	float: middle;
+}
+
+/* Large buttons for lost and found something */
+.buttons {
+	background-color: #FFFAE5;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	border: 3px solid #FFBB33;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFBB33;
+	width: 400px;
+	height: 70px;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 26px;
+	font-weight: bold;
+	outline: none;
+	margin-top: 3%;
+}
+
+.lostButton {
+	margin-right: 2%;
+}
+
+.foundButton {
+    margin-left: 2%;
+}
+
+.buttons:hover {
+	box-shadow: 0 10px 50px 0 rgba(255, 128, 0, 0.2), 0 10px 50px 0 rgba(0,0,0,0.2);
+}
+
+.buttons:active {
+    top: 1px;
+}
+
+/* Button for SEARCH FOR A LOCATION */
+.locationButton {
+	background-color: #FFFAE5;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	border: 3px solid #F37E3D;
+	display: inline-block;
+	cursor: pointer;
+	color: #F37E3D;
+	width: 400px;
+	height: 70px;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 26px;
+	font-weight: bold;
+	outline: none;
+	float: center;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.locationButton:hover {
+	box-shadow: 0 10px 50px 0 rgba(255, 128, 0, 0.2), 0 10px 50px 0 rgba(0,0,0,0.2);
+}
+.locationButton:active {
+    top: 1px;
+}
+
+.show {
+    display: block;
+}
+
+.arrow {
+	margin-top: 50px;
+	color: white;
+}
+
+.infoContainer {
+    background-color: #FFFAE5;
+	box-shadow: 0 10px 50px 0 rgba(255, 128, 0, 0.2), 0 10px 50px 0 rgba(0,0,0,0.2);
+	text-align: justify;
+	margin: 300px 3% 4% 3%; /* top right bottom left */
+	padding: 2%;
+	border-radius: 40px;
+	border: 3px solid #FFBB33;
+	opacity: 0.9;
+}
+
+.column0 {
+    width: 40vw;
+    float: left;
+    padding: 1vw;
+	display: grid;
+}
+.column1 {
+	width: 40vw;
+    float: right;
+    padding: 1vw;
+	display: grid;
+}
+
+.card{
+	padding: 15px;
+	color: black;
+	background-color: #FFFAE5;
+	text-align: justify;
+	border: 3px solid #FFBB33;
+	border-radius: 30px;
+	margin: 0 0 0 0;
+}
+
+.clearfix {
+  overflow: auto;
+  text-align: justify;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer{
+	background-color: #FFFBE5;
+	color: #FFFBE5;
+	padding: 5px;
+	margin-top: 17px;
+}
+
+.links {
+    color: #FFBB33;
+}
+
+.links:hover {
+	text-decoration: underline;
+}
+
+ul {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 850px) {
+	.lostButton {
+		margin-right: 0;
+	}
+	
+	.foundButton {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    .column0 {
+        width: auto;
+        padding: 1vw;
+    }
+    .column1 {
+	    width: auto;
+        padding: 1vw;
+		margin-top: 1%;
+    }
+	.row {
+		margin-top: 2%;
+		margin-bottom: 2%;
+	}
+}	
+
+@media screen and (max-width: 450px) {
+	.formPopup {
+		left: 6.5vh;
+	}
+}
